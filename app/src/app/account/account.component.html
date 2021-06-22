@@ -1,0 +1,29 @@
+<div>
+  <h1 class="cover-heading">Account List</h1>
+  <app-account-type></app-account-type>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Account Type</th>
+      <th scope="col">Balance</th>
+      <th scope="col">Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of accounts">
+      <td>{{account.firstName}}</td>
+      <td>{{account.lastName}}</td>
+      <td>{{getAccName(account.typeId)}}</td>
+      <td>{{account.balance}}</td>
+      <td>{{account.address}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button type="button" class="btn btn-primary" (click)="openNewAccount()">Add</button>
+  </div>
+</div>

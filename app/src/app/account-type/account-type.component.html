@@ -1,0 +1,11 @@
+<div>
+  <div class="mb-3 col-md-4 row">
+  <label class="col-sm-4 col-form-label">Select Type</label>
+  <select class="form-select col-sm-10" (change)="onAccountTypeChange($event)">
+    <option value=0>All</option>
+    <option *ngFor="let accountType of accountTypes" [value]="accountType.id">
+      {{accountType.name}}
+    </option>
+  </select>
+  </div>
+</div>
